@@ -26,7 +26,7 @@ Vue.component('imageloop', {
 					scope.datas.list = res.data.rows;
 					scope.datas.count = res.data.count;
 				},
-				faile : function(){
+				false : function(){
 					scope.datas.loading = true;
 					that.ctrl.alert({
 						message : '网络错误'
@@ -86,7 +86,7 @@ Vue.component('imageloop', {
 						that.switchAddDataPanel();
 						that.refresh();
 					},
-					faile : function(){
+					false : function(){
 						scope.datas.loading = false;
 						that.ctrl.alert({
 							message : '网络错误'
@@ -145,7 +145,7 @@ Vue.component('imageloop', {
 					})
 					that.refresh();
 				},
-				faile : function(){
+				false : function(){
 					scope.datas.loading = false;
 					that.ctrl.alert({
 						message : '网络错误'

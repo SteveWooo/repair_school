@@ -26,7 +26,7 @@ Vue.component('class', {
 					scope.datas.list = res.data.rows;
 					scope.datas.count = res.data.count;
 				},
-				faile : function(){
+				false : function(){
 					scope.datas.loading = true;
 					that.ctrl.alert({
 						message : '网络错误'
@@ -86,7 +86,7 @@ Vue.component('class', {
 						that.switchAddDataPanel();
 						that.refresh();
 					},
-					faile : function(){
+					false : function(){
 						scope.datas.loading = false;
 						that.ctrl.alert({
 							message : '网络错误'
@@ -146,7 +146,7 @@ Vue.component('class', {
 					})
 					that.refresh();
 				},
-				faile : function(){
+				false : function(){
 					scope.datas.loading = false;
 					that.ctrl.alert({
 						message : '网络错误'
@@ -188,7 +188,7 @@ Vue.component('class', {
 						that.switchUpdateDataPanel();
 						that.refresh();
 					},
-					faile : function(){
+					false : function(){
 						scope.datas.loading = false;
 						that.ctrl.alert({
 							message : '网络错误'

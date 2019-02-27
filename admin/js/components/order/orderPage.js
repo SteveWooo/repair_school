@@ -23,7 +23,7 @@ Vue.component('order', {
 
 					callback(res);
 				},
-				fail : function(){
+				false : function(){
 					scope.datas.loading = true;
 					that.ctrl.alert({
 						message : '网络错误'
@@ -55,7 +55,7 @@ Vue.component('order', {
 					scope.datas.list = res.data.rows;
 					scope.datas.count = res.data.count;
 				},
-				faile : function(){
+				false : function(){
 					scope.datas.loading = true;
 					that.ctrl.alert({
 						message : '网络错误'
@@ -104,7 +104,7 @@ Vue.component('order', {
 						that.switchUpdateDataPanel();
 						that.refresh();
 					},
-					faile : function(){
+					false : function(){
 						scope.datas.loading = false;
 						that.ctrl.alert({
 							message : '网络错误'
