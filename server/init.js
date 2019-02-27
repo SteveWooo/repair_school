@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const session = require('express-session');
 async function init(config){
 	var swc = {
 		config : config,
@@ -26,6 +27,14 @@ async function init(config){
 	//中间件
 	swc.app.use(bodyParser.urlencoded({extended: false}));
 	swc.app.use(bodyParser.json({"limit":"10000kb"}));
+	swc.app.use(session({
+		secret: 'secret', 
+		cookie: {
+			maxAge: 60000
+		},
+		saveUninitialized: true,
+		resave: false,
+	}));
 
 	//路由定义
 	swc = await require('./router').router(swc);

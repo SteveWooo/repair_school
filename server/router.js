@@ -215,6 +215,11 @@ var login_routers = {
 		path : "/api/m/user/login",
 		method : "post"
 	},
+	getCode : {
+		module : require("./routers/admin/user/getCode"),
+		path : "/api/m/user/get_code",
+		method : "get"
+	},
 	loginWechat : {
 		module : require("./routers/wechat/user/login"),
 		path : "/api/w/user/login",
