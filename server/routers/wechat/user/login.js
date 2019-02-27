@@ -111,10 +111,10 @@ async function set_db_login(swc, options){
 			update_at : now
 		}
 
-		await swc.db.models.users.create(user);
-		return true;
+		var result = await swc.db.models.users.create(user);
+		return result;
 	}else {
-		return true;
+		return result.rows[0];
 	}
 }
 
@@ -136,7 +136,7 @@ async function login(req, res, next){
 		return ;
 	}
 
-	await set_db_login(swc, {
+	var userData = await set_db_login(swc, {
 		openid : result.data.openid
 	})
 
@@ -146,7 +146,8 @@ async function login(req, res, next){
 	req.response = {
 		status : 2000,
 		data : {
-			swc_session : swc_session
+			swc_session : swc_session,
+			user : userData
 		}
 	};
 
