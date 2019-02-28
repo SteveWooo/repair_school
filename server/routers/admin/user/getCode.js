@@ -17,7 +17,7 @@ module.exports = async (req, res, next)=>{
 	var query = req.body;
 	var swc = req.swc;
 	//进来先清理一下缓存
-	clearCodeCache();
+	// clearCodeCache();
 
 	//创建一个验证码
 	var captcha = svgCaptcha.create({  
@@ -29,7 +29,7 @@ module.exports = async (req, res, next)=>{
     });  
 
 	var code = captcha.text.toLowerCase();
-	console.log(req.session)
+
 	req.session.code = code;
 	res.header("Content-Type", "image/svg+xml")
 	res.send(String(captcha.data));

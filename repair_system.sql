@@ -189,3 +189,40 @@ CREATE TABLE `service_classes` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+-- ----------------------------
+--  Records of `service_classes`
+-- ----------------------------
+BEGIN;
+INSERT INTO `service_classes` VALUES ('1', 'feb956592ba8784737ddefeef8559c64', 0xe8bdafe4bbb6, 0xe8bdafe4bbb6, 0x30646266393365666466393638303161306535333465373161333865363733322e706e67, '54ddc2d16fb3da53e424ea702e6b7020', '54ddc2d16fb3da53e424ea702e6b7020', '1551255185868', '1551255185868'), ('4', '57cd67f2ba82fd29f886672212a4bdb9', 0xe5aea2e688b7e7abafe7bbb4e4bfae, 0xe5aea2e688b7e7abafe7bbb4e4bfae, 0x31373437313365623761616666643966646339356139633838626164356363332e706e67, '54ddc2d16fb3da53e424ea702e6b7020', '54ddc2d16fb3da53e424ea702e6b7020', '1551286152176', '1551286152176'), ('5', '204efa87d4b555aff57fdd2a5b3d8cac', 0xe88bb9e69e9ce58f8ce7b3bbe7bb9f, 0xe88bb9e69e9ce58f8ce7b3bbe7bb9f, 0x31386531343637323239633765373834346231613664623138386362303534342e706e67, '54ddc2d16fb3da53e424ea702e6b7020', '54ddc2d16fb3da53e424ea702e6b7020', '1551286242127', '1551286242127'), ('6', 'dee54082d56fc3ef78f11f65f13fbf80', 0x4d6163626f6f6b, 0x4d6163626f6f6b, 0x30313539306237623931366530343634646538633862646634613630303763642e706e67, '54ddc2d16fb3da53e424ea702e6b7020', '54ddc2d16fb3da53e424ea702e6b7020', '1551286260718', '1551286260718'), ('8', '3e4434d19de1205b213b2c65d53e26dc', 0xe9878de8a385e7b3bbe7bb9f, 0xe9878de8a385e7b3bbe7bb9f, 0x66366666396263393437383030643265396365653263373533356635663163352e706e67, '54ddc2d16fb3da53e424ea702e6b7020', '54ddc2d16fb3da53e424ea702e6b7020', '1551286309342', '1551286309342'), ('10', 'f0701dcb4b94e43cf0082f7f339ec3af', 0xe7bd91e7bb9ce997aee9a298, 0xe7bd91e7bb9ce997aee9a298, 0x33643838353133383330393331326433663466346331373761393632376531382e706e67, '54ddc2d16fb3da53e424ea702e6b7020', '54ddc2d16fb3da53e424ea702e6b7020', '1551286355288', '1551286355288');
+COMMIT;
+
+-- ----------------------------
+--  Table structure for `users`
+-- ----------------------------
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `openid` varchar(32) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `user_id` varchar(32) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `nick_name` varchar(255) COLLATE utf8mb4_bin DEFAULT NULL,
+  `avatar_url` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `mobile` text CHARACTER SET utf8 COLLATE utf8_bin,
+  `name` text CHARACTER SET utf8 COLLATE utf8_bin,
+  `position_field` text CHARACTER SET utf8 COLLATE utf8_bin,
+  `position_building` text CHARACTER SET utf8 COLLATE utf8_bin,
+  `position_room` text CHARACTER SET utf8 COLLATE utf8_bin,
+  `create_by` varchar(32) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `update_by` varchar(32) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `create_at` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  `update_at` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+-- ----------------------------
+--  Records of `users`
+-- ----------------------------
+BEGIN;
+INSERT INTO `users` VALUES ('1', 'o4Eua5U3jOFo8GhA_53fa0m7GdSE', '02528e6c7b0565f0ff9d0526d3485537', 'DenielFrank?', 'https://wx.qlogo.cn/mmopen/vi_32/JpibDD9hjDKFYzMKQsByxZTkYNEjzqK88r84h6f9tEIGAEriaNxWrZOhhpTo4nibUJIQwfYerZoIETj8vUvoHhn3A/132', 0x74657374, 0x74657374, '', '', '', 'wechat', 'wechat', '1551254626560', '1551254626560'), ('2', 'o4Eua5aIZGVDM27g19dX7H2g9CGY', 'a886f04d28335d2e6515f14e714402c6', '菜 头.?', 'https://wx.qlogo.cn/mmopen/vi_32/5GV7AA0NzMtfWRlSbF1lQ0GNtQ01sgthZr3agpZl4ic9KNEibbqTeIMoHHHDlibJXTGZAWxicqiaAYtibC5zMoQdwC1Q/132', 0x3135353231313437313639, 0xe8b596e6b6a6e6b3bd, 0xe4b89ce58cba, 0xe4b89ce5ada6e6a5bc31e58fb7, 0x353239, 'wechat', 'wechat', '1551255810917', '1551255810917'), ('3', 'o4Eua5eLCm3PUSr4psiccn1Y-rvo', '7e7db69f1a2e405006b77c1055d97bff', 'ray', 'https://wx.qlogo.cn/mmopen/vi_32/IJykQFPVHE0zObgf7bDKVcGRt9jl8VWIok2apOs1EqpZ8u8PtzD3NicdkpyPknzlEbTSxbYibJxp8V3Zt7lDm3Vg/132', '', '', '', '', '', 'wechat', 'wechat', '1551258692906', '1551258692906');
+COMMIT;
+
+SET FOREIGN_KEY_CHECKS = 1;
