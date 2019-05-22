@@ -14,11 +14,10 @@ function auth_wechat(swc, query){
 			if(typeof body == "string"){
 				body = JSON.parse(body);
 			}
-
 			if(!body){
 				resolve({
 					status : 4003,
-					message : "鉴权接口异常"
+					error_message : "鉴权接口异常:无body返回"
 				});
 				return ;
 			}
@@ -26,7 +25,7 @@ function auth_wechat(swc, query){
 			if(!body.session_key || !body.openid){
 				resolve({
 					status : 4003,
-					message : "鉴权接口异常"
+					error_message : "鉴权接口异常:" + body.errmsg
 				});
 				return ;
 			}

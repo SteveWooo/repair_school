@@ -10,9 +10,10 @@
 	},
 	"mysql" : {
 		"host" : "localhost",
+		"host" : "115.28.241.66",
 		"user" : "root",
-		"password" : "123456",
+		"password" : "lyoko123RAIN",
 		"database" : "repair_system",
-		"port" : 3306
+		"port" : 8001
 	}
 }
